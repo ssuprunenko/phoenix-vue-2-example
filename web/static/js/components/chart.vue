@@ -1,17 +1,19 @@
 <template>
   <div>
-    <button v-on:click="redrawChart">Redraw!</button>
-    <canvas id="myChart" width="700" height="300"></canvas>
+    <button v-on:click='redrawChart'>Redraw!</button>
+    <canvas id='myChart' width='700' height='300'></canvas>
   </div>
 </template>
 
 <script>
+import Chart from 'chart.js'
+
 export default {
-  data() {
+  data () {
     return {
       myChart: null,
       chartData: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
           label: '# of Votes',
           data: [12, 19, 3, 5, 2, 3],
@@ -34,31 +36,31 @@ export default {
           borderWidth: 1
         }]
       }
-    };
+    }
   },
 
-  mounted() {
+  mounted () {
     this.drawChart()
   },
 
   methods: {
-    drawChart() {
-      const ctx = document.getElementById("myChart")
+    drawChart () {
+      const ctx = document.getElementById('myChart')
       this.myChart = new Chart(ctx, {
-        type: "bar",
+        type: 'bar',
         data: this.chartData,
         options: {
           scales: {
             yAxes: [{
               ticks: {
-                beginAtZero:true
+                beginAtZero: true
               }
             }]
           }
         }
       })
     },
-    redrawChart() {
+    redrawChart () {
       this.chartData.datasets[0].data = [
         ~~(Math.random() * 20),
         ~~(Math.random() * 20),
@@ -70,8 +72,8 @@ export default {
       this.myChart.update()
     }
   }
-};
+}
 </script>
 
-<style lang="css">
+<style lang='css'>
 </style>
