@@ -11,7 +11,23 @@
 //
 // If you no longer want to use a dependency, remember
 // to also remove its path from "config.paths.watched".
-import "phoenix_html"
+import 'phoenix_html'
+import Vue from 'vue'
+import Chart from 'chart.js'
+
+// Components
+import Help from './components/help'
+import MyChart from './components/chart'
+
+export var HelpVue = new Vue({
+  el: '#help',
+  render: h => h(Help)
+})
+
+export var ChartVue = new Vue({
+  el: '#chart',
+  render: h => h(MyChart)
+})
 
 // Import local files
 //
