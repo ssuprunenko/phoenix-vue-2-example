@@ -43,7 +43,7 @@ export default {
 
   methods: {
     drawChart() {
-      var ctx = document.getElementById("myChart")
+      const ctx = document.getElementById("myChart")
       this.myChart = new Chart(ctx, {
         type: "bar",
         data: this.chartData,
