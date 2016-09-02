@@ -22,7 +22,9 @@ defmodule Web.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Web do
-  #   pipe_through :api
-  # end
+  scope "/api", Web do
+    pipe_through :api
+
+    get "/random", PageController, :random
+  end
 end

@@ -12,4 +12,8 @@ defmodule Web.PageController do
   def empty(conn, _params) do
     render conn, "empty.html"
   end
+
+  def random(conn, _params) do
+    render conn, data: Enum.map(1..6, fn(_) -> :rand.uniform(100) end)
+  end
 end
