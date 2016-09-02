@@ -13,10 +13,14 @@
 // to also remove its path from "config.paths.watched".
 import 'phoenix_html'
 import Vue from 'vue/dist/vue.js'
+import VueResource from 'vue-resource'
 
 // Components
 import Help from './components/help'
 import Chart from './components/chart'
+
+Vue.use(VueResource)
+Vue.http.options.root = '/api'
 
 Vue.component('chart', Chart)
 Vue.component('help', Help)

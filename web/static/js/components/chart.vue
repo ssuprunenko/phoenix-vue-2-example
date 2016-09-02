@@ -74,15 +74,11 @@ export default {
       })
     },
     redrawChart () {
-      this.chartData.datasets[0].data = [
-        ~~(Math.random() * 20),
-        ~~(Math.random() * 20),
-        ~~(Math.random() * 20),
-        ~~(Math.random() * 20),
-        ~~(Math.random() * 20),
-        ~~(Math.random() * 20)
-      ]
-      this.myChart.update()
+      this.$http.get('random').then((response) => {
+        console.log(response.data)
+        this.chartData.datasets[0].data = JSON.parse(response.data)
+        this.myChart.update()
+      })
     }
   }
 }
