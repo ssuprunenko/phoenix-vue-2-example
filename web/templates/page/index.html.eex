@@ -1,4 +1,4 @@
-<div id="chart"></div>
+<chart label="# of Votes" :values="[12, 19, 3, 5, 2, 3]"></chart>
 
 <div class="row marketing">
   <div class="col-lg-6">
@@ -16,5 +16,5 @@
     </ul>
   </div>
 
-  <div id="help"></div>
+  <help></help>
 </div>
