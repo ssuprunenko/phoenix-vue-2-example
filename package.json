@@ -15,9 +15,9 @@
   "devDependencies": {
     "babel-brunch": "~6.0.0",
     "babel-plugin-transform-runtime": "^6.8.0",
-    "brunch": "2.7.4",
+    "brunch": "~2.8.2",
     "clean-css-brunch": "~2.0.0",
-    "css-brunch": "~2.0.0",
+    "css-brunch": "~2.6.0",
     "eslint": "^3.0.0",
     "eslint-plugin-html": "^1.5.2",
     "eslint-config-vue": "^1.1.0",
