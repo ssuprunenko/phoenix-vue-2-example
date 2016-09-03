@@ -75,7 +75,6 @@ export default {
     },
     redrawChart () {
       this.$http.get('random').then((response) => {
-        console.log(response.data)
         this.chartData.datasets[0].data = JSON.parse(response.data)
         this.myChart.update()
       })
