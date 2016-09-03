@@ -1,5 +1,11 @@
 # Web
 
+## Production
+You can try production app here http://138.68.73.180:51745
+
+Deployed to Digital Ocean $10 Ubuntu 16.04 droplet with Dokku.
+
+## Development
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
