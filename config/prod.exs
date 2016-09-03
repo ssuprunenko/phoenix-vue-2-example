@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :web, Web.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: System.get_env("HOSTNAME"), port: 51745],
+  url: [host: System.get_env("HOSTNAME"), port: 80],
   cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production
