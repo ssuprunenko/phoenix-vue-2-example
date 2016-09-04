@@ -18,7 +18,7 @@ defmodule Web.Router do
 
     get "/", PageController, :index
     get "/sample", PageController, :sample
-    get "/empty", PageController, :empty
+    get "/chat", PageController, :chat
   end
 
   # Other scopes may use custom stacks.

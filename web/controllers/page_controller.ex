@@ -9,8 +9,8 @@ defmodule Web.PageController do
     render conn, "sample.html"
   end
 
-  def empty(conn, _params) do
-    render conn, "empty.html"
+  def chat(conn, _params) do
+    render conn, "chat.html"
   end
 
   def random(conn, _params) do
