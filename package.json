@@ -9,7 +9,7 @@
     "phoenix": "file:deps/phoenix",
     "phoenix_html": "file:deps/phoenix_html",
     "vue": "2.0.0-rc.4",
-    "vue-resource": "^0.9.3",
+    "vue-resource": "~1.0.0",
     "chart.js": "^2.2.2"
   },
   "devDependencies": {
