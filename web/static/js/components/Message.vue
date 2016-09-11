@@ -11,14 +11,21 @@
         <small>{{msg.date}}</small>
       </h5>
       <em v-if="msg.isSystem" class="text-muted">{{msg.text}}</em>
-      <p v-else>{{msg.text}}</p>
+      <div v-else v-html="parsedText"></div>
     </div>
   </div>
 </template>
 
 <script>
+  import marked from 'marked'
+
   export default {
-    props: ['msg']
+    props: ['msg'],
+    computed: {
+      parsedText () {
+        return marked(this.msg.text)
+      }
+    }
   }
 </script>
 
