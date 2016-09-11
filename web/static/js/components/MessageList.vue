@@ -1,9 +1,31 @@
 <template>
   <div>
-    <input v-model="currentMessage" @keyup.enter="pushMessage" type="text"></input>
-    <ul>
-      <li v-for='msg in messages'>{{msg}}</li>
-    </ul>
+    <div class='form-group'>
+      <input
+        v-model='currentMessage'
+        @keyup.enter='pushMessage'
+        type='text'
+        class='form-control'
+        placeholder='Message #random'
+      />
+    </div>
+
+    <div>
+      <div class='media' v-for='msg in messages'>
+        <div class="media-left">
+          <a href="#">
+            <img :src="msg.avatarUrl" class="avatar">
+          </a>
+        </div>
+        <div class="media-body">
+          <h5 class='media-heading'>
+            {{msg.name}}
+            <small>{{msg.date}}</small>
+          </h5>
+          {{msg.text}}
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,19 +38,36 @@
     data () {
       return {
         messages: [],
-        currentMessage: 'Start'
+        currentMessage: '',
+        name: `User ${Math.floor(Math.random() * 10000)}`
       }
     },
     mounted () {
       channel.on('new_msg', payload => {
-        this.messages.push(payload.body)
+        this.messages.unshift({
+          name: payload.name,
+          text: payload.body,
+          date: new Date().toLocaleTimeString('en-US', { hour12: false }),
+          avatarUrl: `https://api.adorable.io/avatars/40/${payload.name}.png`
+        })
       })
     },
     methods: {
       pushMessage () {
-        channel.push('new_msg', { body: this.currentMessage })
+        channel.push('new_msg', {
+          name: this.name,
+          body: this.currentMessage
+        })
         this.currentMessage = ''
       }
     }
   }
 </script>
+
+<style>
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+  }
+</style>

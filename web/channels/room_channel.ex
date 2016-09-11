@@ -8,8 +8,8 @@ defmodule Web.RoomChannel do
 		{:error, %{reason: "unauthorized"}}
 	end
 
-	def handle_in("new_msg", %{"body" => body}, socket) do
-		broadcast! socket, "new_msg", %{body: body}
+	def handle_in("new_msg", %{"name" => name, "body" => body}, socket) do
+		broadcast! socket, "new_msg", %{name: name, body: body}
 		{:noreply, socket}
 	end
 

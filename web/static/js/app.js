@@ -1,5 +1,7 @@
 import 'phoenix_html'
-import Vue from 'vue/dist/vue.js'
+
+// Vendor
+import Vue from 'vue'
 import VueResource from 'vue-resource'
 
 // Components
@@ -10,10 +12,11 @@ import MessageList from './components/MessageList.vue'
 Vue.use(VueResource)
 Vue.http.options.root = '/api'
 
-Vue.component('chart', Chart)
-Vue.component('help', Help)
-Vue.component('message-list', MessageList)
-
 new Vue({
-  el: '#app'
+  el: '#app',
+  components: {
+    Help,
+    Chart,
+    MessageList
+  }
 })
