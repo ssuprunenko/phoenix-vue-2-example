@@ -10,9 +10,9 @@
     "marked": "^0.3.6",
     "phoenix": "file:deps/phoenix",
     "phoenix_html": "file:deps/phoenix_html",
-    "vue": "2.0.0-rc.5",
-    "vue-resource": "~1.0.0",
-    "vue-template-compiler": "2.0.0-rc.5"
+    "vue": "2.0.0-rc.6",
+    "vue-resource": "~1.0.2",
+    "vue-template-compiler": "2.0.0-rc.6"
   },
   "devDependencies": {
     "babel-brunch": "~6.0.0",

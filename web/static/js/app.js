@@ -13,7 +13,7 @@ Vue.use(VueResource)
 Vue.http.options.root = '/api'
 
 new Vue({
-  el: '#app',
+  el: 'main',
   components: {
     Help,
     Chart,
