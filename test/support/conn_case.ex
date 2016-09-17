@@ -20,6 +20,11 @@ defmodule Web.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
+      alias Web.Repo
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+
       import Web.Router.Helpers
 
       # The default endpoint for testing
@@ -28,6 +33,11 @@ defmodule Web.ConnCase do
   end
 
   setup tags do
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Web.Repo)
+
+    unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(Web.Repo, {:shared, self()})
+    end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end

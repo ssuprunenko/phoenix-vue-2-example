@@ -8,21 +8,20 @@
     <meta name="author" content="">
 
     <title>Hello Web!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href='<%= static_path(@conn, "/css/app.css") %>'>
   </head>
 
   <body>
     <div class="container">
       <header class="header">
         <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
+          <ul class="nav nav-pills">
+            <li><%= link("Home", to: "/") %></li>
             <li><%= link("Sample", to: "/sample") %></li>
             <li><%= link("Chat", to: "/chat") %></li>
+            <li><%= link("Links", to: "/links") %></li>
           </ul>
         </nav>
-        <%= link to: "/" do %>
-          <span class="logo"></span>
-        <% end %>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
@@ -33,6 +32,6 @@
       </main>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src='<%= static_path(@conn, "/js/app.js") %>'></script>
   </body>
 </html>
