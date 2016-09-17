@@ -8,3 +8,12 @@ config :web, Web.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Configure your database
+config :web, Web.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "phoenix_vue_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox

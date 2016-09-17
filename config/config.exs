@@ -5,13 +5,16 @@
 # is restricted to this project.
 use Mix.Config
 
+# General application configuration
+config :web,
+  ecto_repos: [Web.Repo]
+
 # Configures the endpoint
 config :web, Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "uoDGC1em9ttxDb+xU333+DQku9WUYGde9SlBi6foakFvXKb7YzT+sMQ1PhIvVOTt",
   render_errors: [view: Web.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Web.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Web.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
