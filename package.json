@@ -20,8 +20,9 @@
     "brunch": "~2.8.2",
     "clean-css-brunch": "~2.0.0",
     "css-brunch": "~2.6.0",
-    "sass-brunch": "^2.6.3",
     "javascript-brunch": "~2.0.0",
+    "sass-brunch": "^2.6.3",
+    "tachyons": "^4.5.1",
     "uglify-js-brunch": "~2.0.1",
     "vue-brunch": "1.2.0",
     "vueify-insert-css": "^1.0.0"
