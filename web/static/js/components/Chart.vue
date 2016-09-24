@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button v-on:click='redrawChart'>Redraw!</button>
     <canvas id='myChart' width='700' height='300'></canvas>
+    <button class="f6 f5-ns ma3 ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow" v-on:click='redrawChart'>Redraw!</button>
   </div>
 </template>
 
