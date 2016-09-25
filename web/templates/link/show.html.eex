@@ -1,0 +1,17 @@
+<h2>Show links</h2>
+
+<ul>
+
+  <li>
+    <strong>Host:</strong>
+    <%= @link.host %>
+  </li>
+
+  <li>
+    <strong>Path:</strong>
+    <%= @link.path %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: link_path(@conn, :index) %>

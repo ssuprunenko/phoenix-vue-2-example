@@ -19,6 +19,7 @@ defmodule Web.Router do
     get "/", PageController, :index
     get "/sample", PageController, :sample
     get "/chat", PageController, :chat
+    resources "/links", LinkController, only: [:index, :show]
   end
 
   # Other scopes may use custom stacks.
@@ -26,5 +27,6 @@ defmodule Web.Router do
     pipe_through :api
 
     get "/random", PageController, :random
+    resources "/links", LinkController, only: [:create, :update, :delete]
   end
 end

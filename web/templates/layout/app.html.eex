@@ -4,35 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Elixir Phoenix and Vue.js examples">
 
-    <title>Hello Web!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <title>Vue |> Phoenix</title>
+    <link rel="stylesheet" href='<%= static_path(@conn, "/css/app.css") %>'>
   </head>
 
-  <body>
-    <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><%= link("Sample", to: "/sample") %></li>
-            <li><%= link("Chat", to: "/chat") %></li>
-          </ul>
-        </nav>
-        <%= link to: "/" do %>
-          <span class="logo"></span>
-        <% end %>
-      </header>
+  <body class="w-100 helvetica bg-white">
+    <header class="bb b--black-10">
+      <nav class="center mw8 pa3 pv4-ns ph4-ns dt border-box w-100">
+        <div class="dtc v-mid tl w-80">
+          <%= link("Home", to: "/", class: "link dim black b f6 f5-ns dib mr3 mr4-ns") %>
+          <%= link("Chart", to: "/sample", class: "link dim gray f6 f5-ns dib mr3 mr4-ns") %>
+          <%= link("Chat", to: "/chat", class: "link dim gray f6 f5-ns dib mr3 mr4-ns") %>
+          <%= link("Links", to: "/links", class: "link dim gray f6 f5-ns dib") %>
+        </div>
+        <div class="dtc v-mid tr w-20">
+          <a href="https://github.com/ssuprunenko/phoenix-vue-2-example" class="link dim gray f6 f5-ns dib" target="_blank">Github</a>
+        </div>
+      </nav>
+    </header>
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <main role="main" class="mw8 center pt3 ph3 pt4-ns">
+      <%= render @view_module, @view_template, assigns %>
+    </main>
 
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-
-    </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script type="text/javascript" async defer src='<%= static_path(@conn, "/js/app.js") %>'></script>
   </body>
 </html>

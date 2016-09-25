@@ -1,0 +1,24 @@
+<h2>Listing links</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Host</th>
+      <th>Path</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <%= for links <- @links do %>
+    <tr>
+      <td><%= links.host %></td>
+      <td><%= links.path %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: link_path(@conn, :show, links), class: "btn btn-default btn-xs" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

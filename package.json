@@ -6,13 +6,13 @@
     "watch": "brunch watch --stdin"
   },
   "dependencies": {
-    "chart.js": "^2.2.2",
+    "chart.js": "^2.3.0",
     "marked": "^0.3.6",
     "phoenix": "file:deps/phoenix",
     "phoenix_html": "file:deps/phoenix_html",
-    "vue": "~2.0.0-rc.6",
-    "vue-template-compiler": "2.0.0-rc.6",
-    "vue-resource": "~1.0.2"
+    "vue": "~2.0.0-rc.7",
+    "vue-resource": "~1.0.3",
+    "vue-template-compiler": "~2.0.0-rc.7"
   },
   "devDependencies": {
     "babel-brunch": "~6.0.0",
@@ -21,6 +21,8 @@
     "clean-css-brunch": "~2.0.0",
     "css-brunch": "~2.6.0",
     "javascript-brunch": "~2.0.0",
+    "sass-brunch": "^2.6.3",
+    "tachyons": "^4.5.1",
     "uglify-js-brunch": "~2.0.1",
     "vue-brunch": "1.2.0",
     "vueify-insert-css": "^1.0.0"

@@ -1,20 +1,25 @@
-<chart label="# of Votes" :values="[12, 19, 3, 5, 2, 3]"></chart>
+<section>
+  <h1 class="fw5">Chart example</h1>
+  <p>Bar chart based on <a href="http://www.chartjs.org/" class="dim blue" target="_blank">Chart.js</a></p>
+  <chart label="# of Votes" :values="[12, 19, 3, 5, 2, 3]"></chart>
+</section>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
+<section class="cf mt3">
+  <div class="fl w-100 w-50-ns">
+    <h2 class="f3 fw5">Resources</h2>
+    <ul class="list pl0 lh-copy">
       <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
+        <a href="http://phoenixframework.org/docs/overview" class="dim blue">Guides</a>
       </li>
       <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
+        <a href="https://hexdocs.pm/phoenix" class="dim blue">Docs</a>
       </li>
       <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
+        <a href="https://github.com/phoenixframework/phoenix" class="dim blue">Source</a>
       </li>
     </ul>
   </div>
-
-  <help></help>
-</div>
+  <div class="fl w-100 w-50-ns">
+    <help></help>
+  </div>
+</section>

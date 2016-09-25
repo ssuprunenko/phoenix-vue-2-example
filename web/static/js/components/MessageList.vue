@@ -1,17 +1,19 @@
 <template>
-  <div>
-    <div class="form-group">
+  <section>
+    <div>
       <input
         v-model="currentMessage"
         @keyup.enter="pushMessage"
         type="text"
-        class="form-control"
+        class="f6 f5-l input-reset ba black-80 b--black-10 bw1 pa3-l pa2 w-100 br3"
         placeholder="Message #random"
       />
     </div>
 
-    <message v-for="msg in messages" :msg="msg" />
-  </div>
+    <div class="mt3">
+      <message v-for="msg in messages" :msg="msg"></message>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -34,7 +36,7 @@
           name: payload.name,
           text: payload.body,
           date: new Date().toLocaleTimeString('en-US', { hour12: false }),
-          avatarUrl: `https://api.adorable.io/avatars/40/${payload.name}.png`,
+          avatarUrl: `https://api.adorable.io/avatars/48/${payload.name}.png`,
           isSystem: payload.is_system
         })
       })

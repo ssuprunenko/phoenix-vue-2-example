@@ -1,9 +1,9 @@
 <template>
-  <div class='col-lg-6'>
-    <h4>Help</h4>
-    <ul>
+  <div>
+    <h2 class="f3 fw5">Help</h2>
+    <ul class="list pl0 lh-copy">
       <li v-for='link in links'>
-        <a :href='link.url'>{{link.title | upcase}}</a>
+        <a :href='link.url' class="dim blue">{{link.title | upcase}}</a>
       </li>
     </ul>
   </div>
