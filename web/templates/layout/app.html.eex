@@ -25,7 +25,7 @@
       </nav>
     </header>
 
-    <main role="main" class="pt3 ph3 pt4-ns">
+    <main role="main" class="mw8 center pt3 ph3 pt4-ns">
       <%= render @view_module, @view_template, assigns %>
     </main>
 

@@ -1,10 +1,10 @@
-<section class="mw8 center">
+<section>
   <h1 class="fw5">Chart example</h1>
   <p>Bar chart based on <a href="http://www.chartjs.org/" class="dim blue" target="_blank">Chart.js</a></p>
   <chart label="# of Votes" :values="[12, 19, 3, 5, 2, 3]"></chart>
 </section>
 
-<section class="mw8 center cf mt3">
+<section class="cf mt3">
   <div class="fl w-100 w-50-ns">
     <h2 class="f3 fw5">Resources</h2>
     <ul class="list pl0 lh-copy">
