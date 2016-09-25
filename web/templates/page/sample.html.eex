@@ -1,6 +1,6 @@
 <section class="mw8 center">
   <h1 class="fw5">Chart example</h1>
   <p>Bar chart based on <a href="http://www.chartjs.org/" class="dim blue" target="_blank">Chart.js</a></p>
-	<chart :values="[0, 1, 2, 3, 4, 5]"></chart>
+	<chart :values="[0, 10, 20, 30, 40, 50]"></chart>
 </section>
 

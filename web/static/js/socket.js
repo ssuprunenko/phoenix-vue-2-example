@@ -51,6 +51,7 @@ const socket = new Socket('/socket', { params: { token: window.userToken }})
 // Finally, pass the token on connect as below. Or remove it
 // from connect if you don't care about authentication.
 
-socket.connect()
+// Commented out because connecting to socket in the component is better
+// socket.connect()
 
 export default socket

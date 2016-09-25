@@ -15,7 +15,6 @@ export default {
       chartData: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
-          label: this.label,
           data: this.values,
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -40,10 +39,6 @@ export default {
   },
 
   props: {
-    label: {
-      type: String,
-      default: 'Unknown'
-    },
     values: {
       type: Array,
       default () {
@@ -58,15 +53,27 @@ export default {
 
   methods: {
     drawChart () {
-      const ctx = document.getElementById('myChart')
+      const ctx = document.getElementById('myChart').getContext('2d')
       this.myChart = new Chart(ctx, {
         type: 'bar',
         data: this.chartData,
         options: {
+          responsive: true,
+          legend: {
+            display: false
+          },
           scales: {
             yAxes: [{
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                min: 0,
+                max: 100,
+                fontSize: 16
+              }
+            }],
+            xAxes: [{
+              ticks: {
+                fontSize: 16
               }
             }]
           }

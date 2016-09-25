@@ -18,7 +18,6 @@
 
 <script>
   import Message from './Message.vue'
-
   import socket from '../socket'
   const channel = socket.channel('room:lobby', {})
 
@@ -31,6 +30,7 @@
       }
     },
     mounted () {
+      socket.connect()
       channel.on('new_msg', payload => {
         this.messages.unshift({
           name: payload.name,
