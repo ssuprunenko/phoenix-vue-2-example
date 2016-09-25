@@ -1,24 +1,31 @@
-<h2>Listing links</h2>
+<section>
+  <h1 class="fw5">List of links (Vue.js)</h1>
+  <p>CRUD example</p>
+  <links-list :links="<%= links_json(@links) %>" />
+</section>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Host</th>
-      <th>Path</th>
+<section class="mt5">
+  <h1 class="fw5">List of links (Server Side Phoenix)</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Host</th>
+        <th>Path</th>
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-  <%= for links <- @links do %>
-    <tr>
-      <td><%= links.host %></td>
-      <td><%= links.path %></td>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <%= for links <- @links do %>
+      <tr>
+        <td><%= links.host %></td>
+        <td><%= links.path %></td>
 
-      <td class="text-right">
-        <%= link "Show", to: link_path(@conn, :show, links), class: "btn btn-default btn-xs" %>
-      </td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+        <td class="text-right">
+          <%= link "Show", to: link_path(@conn, :show, links), class: "btn btn-default btn-xs" %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</section>

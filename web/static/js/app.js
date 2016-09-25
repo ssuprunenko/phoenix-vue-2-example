@@ -8,6 +8,7 @@ import VueResource from 'vue-resource'
 import Help from './components/Help.vue'
 import Chart from './components/Chart.vue'
 import MessageList from './components/MessageList.vue'
+import LinksList from './components/LinksList.vue'
 
 Vue.use(VueResource)
 Vue.http.options.root = '/api'
@@ -17,6 +18,7 @@ new Vue({
   components: {
     Help,
     Chart,
-    MessageList
+    MessageList,
+    LinksList
   }
 })

@@ -1,14 +1,12 @@
 <template>
   <div>
-    <h3>Links List components</h3>
-    <div v-for="link in links">
-      <p>{{ link.host }}</p>
-      <p>{{ link.path }}</p>
-    </div>
+    <repo-link v-for="link in links" :link="link"></repo-link>
   </div>
 </template>
 
 <script>
+  import RepoLink from './RepoLink.vue'
+
   export default {
     props: {
       links: {
@@ -17,6 +15,9 @@
           return []
         }
       }
+    },
+    components: {
+      RepoLink
     }
   }
 </script>
