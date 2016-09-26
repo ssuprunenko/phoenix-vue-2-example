@@ -1,7 +1,7 @@
 <section>
   <h1 class="fw5">List of links (Vue.js)</h1>
   <p>CRUD example</p>
-  <links-list :links="<%= links_json(@links) %>" />
+  <repo-links :links="<%= links_json(@links) %>" />
 </section>
 
 <section class="mt5">
