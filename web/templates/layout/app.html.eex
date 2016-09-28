@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='<%= static_path(@conn, "/css/app.css") %>'>
   </head>
 
-  <body class="w-100 helvetica bg-white">
+  <body class="w-100 sans-serif bg-white">
     <header class="bb b--black-10">
       <nav class="center mw8 pa3 pv4-ns ph4-ns dt border-box w-100">
         <div class="dtc v-mid tl w-80">
