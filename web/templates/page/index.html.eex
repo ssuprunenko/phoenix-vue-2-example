@@ -1,7 +1,7 @@
 <section>
   <h1 class="fw5">Chart example</h1>
   <p>Bar chart based on <a href="http://www.chartjs.org/" class="dim blue" target="_blank">Chart.js</a></p>
-  <chart :values="[52, 79, 23, 55, 12, 30]"></chart>
+  <graph :values="[52, 79, 23, 55, 12, 30]"></graph>
 </section>
 
 <section class="cf mt3">

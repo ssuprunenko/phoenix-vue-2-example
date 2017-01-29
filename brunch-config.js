@@ -61,6 +61,9 @@ exports.config = {
           'node_modules/'
         ]
       }
+    },
+    vue: {
+      extractCSS: true
     }
   },
 
@@ -73,7 +76,7 @@ exports.config = {
   npm: {
     enabled: true,
     aliases: {
-      vue: 'vue/dist/vue.js'
+      vue: 'vue/dist/vue.common.js'
     }
   }
 }

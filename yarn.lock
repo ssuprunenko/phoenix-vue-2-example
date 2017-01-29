@@ -187,7 +187,7 @@ babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-babel-core@^6.0.0, babel-core@^6.13.2, babel-core@^6.22.0:
+babel-core@^6.0.0, babel-core@^6.17.0, babel-core@^6.22.0:
   version "6.22.1"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.22.1.tgz#9c5fd658ba1772d28d721f6d25d968fc7ae21648"
   dependencies:
@@ -572,7 +572,7 @@ babel-register@^6.22.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.9.2:
+babel-runtime@^6.18.0, babel-runtime@^6.22.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.22.0.tgz#1cf8b4ac67c77a4ddb0db2ae1f74de52ac4ca611"
   dependencies:
@@ -1885,6 +1885,10 @@ init-skeleton@~1.0:
     ncp "^2.0.0"
     normalize-git-url "~3.0.1"
 
+insert-css@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/insert-css/-/insert-css-2.0.0.tgz#eb5d1097b7542f4c79ea3060d3aee07d053880f4"
+
 interpret@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.1.tgz#d579fb7f693b858004947af39fa0db49f795602c"
@@ -2097,7 +2101,7 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
-json5@^0.5.0:
+json5@^0.5.0, json5@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
@@ -3701,23 +3705,22 @@ vm-browserify@~0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-brunch@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/vue-brunch/-/vue-brunch-1.2.0.tgz#45762d3519449598d4a90d810ac6a65b4ac370ba"
+vue-brunch@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-brunch/-/vue-brunch-2.0.0.tgz#7bd5ec595eadcab8a0f189bc9f9fa40fc745f159"
   dependencies:
-    babel-core "^6.13.2"
-    babel-runtime "^6.9.2"
-    vue-hot-reload-api "^2.0.6"
-    vueify "9.2.3"
+    insert-css "^2.0.0"
+    vue-hot-reload-api "^2.0.7"
+    vueify "^9.4.0"
     vueify-insert-css "^1.0.0"
 
-vue-hot-reload-api@^2.0.1, vue-hot-reload-api@^2.0.6:
+vue-hot-reload-api@^2.0.1, vue-hot-reload-api@^2.0.7:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.0.8.tgz#b3ba6a9a443d561b14f2785c8ea056618cb2faa3"
 
-vue-resource@~1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vue-resource/-/vue-resource-1.0.3.tgz#8d52d0d8a9ed5f2ae704c68d530c84ceaf97be14"
+vue-resource@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vue-resource/-/vue-resource-1.1.0.tgz#65df39dfb4ad6bb1969bb40a1d8e17274faf07ae"
 
 vue-template-compiler@^2.0.0-alpha.8:
   version "2.1.10"
@@ -3725,6 +3728,10 @@ vue-template-compiler@^2.0.0-alpha.8:
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
+
+vue-template-es2015-compiler@^1.2.2:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.5.0.tgz#e4f672ab1718a3abf9171a080daefac31be117e1"
 
 vue@^2.1.10:
   version "2.1.10"
@@ -3734,14 +3741,15 @@ vueify-insert-css@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vueify-insert-css/-/vueify-insert-css-1.0.0.tgz#57e5d791907e8c9d87ae6de099a2174bd0a7f990"
 
-vueify@9.2.3:
-  version "9.2.3"
-  resolved "https://registry.yarnpkg.com/vueify/-/vueify-9.2.3.tgz#942361272c0beac466b04b7406da0361ae544477"
+vueify@^9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/vueify/-/vueify-9.4.0.tgz#bb9d4a73023cab3941e58e231bf7914284b375a2"
   dependencies:
     chalk "^1.1.1"
     convert-source-map "^1.2.0"
     cssnano "^3.3.2"
     hash-sum "^1.0.2"
+    json5 "^0.5.1"
     lru-cache "^4.0.0"
     object-assign "^4.0.1"
     postcss "^5.0.10"
@@ -3750,6 +3758,7 @@ vueify@9.2.3:
     through "^2.3.6"
     vue-hot-reload-api "^2.0.1"
     vue-template-compiler "^2.0.0-alpha.8"
+    vue-template-es2015-compiler "^1.2.2"
 
 whet.extend@~0.9.9:
   version "0.9.9"
