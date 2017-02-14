@@ -2,6 +2,8 @@ defmodule Web.RoomChannel do
 	use Phoenix.Channel
 	require Logger
 
+	intercept ["new_msg"]
+
 	def join("room:lobby", _message, socket) do
 		{:ok, socket}
 	end
