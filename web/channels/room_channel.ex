@@ -1,5 +1,8 @@
 defmodule Web.RoomChannel do
 	use Phoenix.Channel
+	require Logger
+
+	intercept ["new_msg"]
 
 	def join("room:lobby", _message, socket) do
 		{:ok, socket}
@@ -9,6 +12,8 @@ defmodule Web.RoomChannel do
 	end
 
 	def handle_in("new_msg", %{"name" => name, "body" => body, "isSystem" => is_system}, socket) do
+		Logger.info("Chat: #{body}")
+
 		broadcast! socket, "new_msg", %{name: name, body: body, is_system: is_system}
 		{:noreply, socket}
 	end

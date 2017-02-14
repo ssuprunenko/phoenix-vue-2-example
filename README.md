@@ -1,6 +1,6 @@
 # Web
 ## Production
-You can try production app [here](http://phoenix-vue.broccoli.si).
+You can try production app [here](https://phoenix-vue.broccoli.si).
 
 Deployed to Digital Ocean $10 Ubuntu 16.04 droplet with Dokku.
 

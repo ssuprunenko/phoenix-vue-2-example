@@ -63,7 +63,8 @@ exports.config = {
       }
     },
     vue: {
-      extractCSS: true
+      extractCSS: true,
+      out: 'priv/static/css/components.css'
     }
   },
 

@@ -8,6 +8,7 @@
 
     <title>Vue |> Phoenix</title>
     <link rel="stylesheet" href='<%= static_path(@conn, "/css/app.css") %>'>
+    <link rel="stylesheet" href='<%= static_path(@conn, "/css/components.css") %>'>
   </head>
 
   <body class="w-100 sans-serif bg-white">
